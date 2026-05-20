@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>JORDAN PORTFOLIO</title>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport">
+  <meta content="Web Developer, Designer, Events Manager" name="keywords">
+  <meta content="Portfolio of Male Jordan – Web Developer, Designer & Events Manager" name="description">
+
+  <!-- Favicons -->
+  <link href="img/000000.jpg" rel="icon">
+
+  <!-- Bootstrap CSS -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <style>
+    /* ========= RESPONSIVE OVERRIDES & IMPROVEMENTS ========= */
+
+    :root {
+      --accent: #0078ff;
+      --accent-light: #cde1f8;
+      --dark: #1e1e1e;
+      --text: #4e4e4e;
+      --bg: #f5f5f5;
+      --whatsapp: #25D366;
+      --whatsapp-dark: #1ebe57;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Syne', sans-serif;
+      color: var(--dark);
+    }
+
+    /* ---- NAVBAR ---- */
+    .navbar-b {
+      transition: all .5s ease-in-out;
+      padding: 20px 0;
+    }
+    .navbar-b.navbar-reduce {
+      padding: 8px 0;
+      background-color: #fff !important;
+      box-shadow: 0 2px 18px rgba(0,0,0,0.08);
+    }
+    .navbar-b.navbar-trans {
+      background: transparent;
+    }
+    .navbar-brand {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+      color: #fff !important;
+    }
+    .navbar-reduce .navbar-brand { color: var(--dark) !important; }
+    .navbar-b .nav-link {
+      color: rgba(255,255,255,0.85) !important;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 8px 16px !important;
+      border-radius: 4px;
+      transition: all 0.3s;
+    }
+    .navbar-reduce .nav-link { color: var(--dark) !important; }
+    .navbar-b .nav-link:hover,
+    .navbar-b .nav-link.active {
+      color: var(--accent) !important;
+    }
+
+    /* Hamburger icon */
+    .navbar-toggler {
+      border: none;
+      background: transparent;
+      padding: 6px 10px;
+      cursor: pointer;
+    }
+    .navbar-toggler span {
+      display: block;
+      width: 25px;
+      height: 2px;
+      background: #fff;
+      margin: 5px 0;
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+    .navbar-reduce .navbar-toggler span { background: var(--dark); }
+
+    /* Mobile nav dropdown */
+    @media (max-width: 767px) {
+      .navbar-b { padding: 14px 0; }
+      .navbar-collapse {
+        background: #fff;
+        border-radius: 12px;
+        margin-top: 12px;
+        padding: 10px 0;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+      }
+      .navbar-b .nav-link {
+        color: var(--dark) !important;
+        padding: 12px 24px !important;
+        font-size: 1rem;
+        border-bottom: 1px solid #f0f0f0;
+      }
+      .navbar-b .nav-link:last-child { border-bottom: none; }
+    }
+
+    /* ---- HERO / INTRO ---- */
+    .intro {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background-size: cover;
+      background-position: center;
+      background-attachment: scroll;
+      position: relative;
+    }
+    .overlay-itro {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0,0,0,0.72) 0%, rgba(0,120,255,0.35) 100%);
+    }
+    .intro-content {
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+    .intro-title {
+      font-size: clamp(2rem, 6vw, 4.5rem);
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+      line-height: 1.1;
+    }
+    .intro-subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.4rem);
+      color: rgba(255,255,255,0.85);
+      font-weight: 300;
+    }
+    .text-slider { color: var(--accent-light); }
+
+    /* Hero CTA buttons */
+    .hero-actions {
+      margin-top: 2rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .btn-hero-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #fff !important;
+      border: 2px solid var(--accent);
+      border-radius: 50px;
+      padding: 12px 28px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .btn-hero-primary:hover {
+      background: #0060cc;
+      border-color: #0060cc;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,120,255,0.4);
+    }
+    .btn-hero-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #fff !important;
+      border: 2px solid rgba(255,255,255,0.7);
+      border-radius: 50px;
+      padding: 12px 28px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .btn-hero-outline:hover {
+      background: rgba(255,255,255,0.15);
+      border-color: #fff;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 576px) {
+      .intro { min-height: 100svh; background-attachment: scroll; }
+      .intro .container { padding: 0 24px; }
+      .hero-actions { flex-direction: column; align-items: flex-start; }
+    }
+
+    /* ---- ABOUT ---- */
+    .about-mf { padding-top: 5rem; }
+
+    .about-img img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 12px;
+    }
+    .about-info p { font-size: 0.95rem; line-height: 1.9; }
+    .skill-mf span { font-size: 0.9rem; }
+    .progress { height: 6px; border-radius: 10px; margin-bottom: 14px; background: #e9e9e9; }
+    .progress-bar { background-color: var(--accent); border-radius: 10px; }
+
+    @media (max-width: 576px) {
+      .about-img { margin-bottom: 1.5rem; }
+      .about-img img { height: 240px; }
+      .box-shadow-full { padding: 2rem 1rem; }
+    }
+
+    /* ---- SERVICES ---- */
+    .services-mf { padding: 5rem 0; }
+    .service-box {
+      padding: 2rem 1.5rem;
+      border-radius: 16px;
+      margin-bottom: 1.5rem;
+      background: #fff;
+      transition: transform 0.3s, box-shadow 0.3s;
+      height: 100%;
+    }
+    .service-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0,120,255,0.12);
+    }
+    .service-ico { margin-bottom: 1rem; }
+    .ico-circle {
+      height: 80px;
+      width: 80px;
+      font-size: 1.8rem;
+      border-radius: 50%;
+      line-height: 1.6;
+      margin: 0 auto;
+      text-align: center;
+      box-shadow: 0 0 0 8px var(--accent);
+      color: var(--accent);
+      display: block;
+    }
+    .s-title { font-size: 1.15rem; font-weight: 700; margin: 1rem 0 0.5rem; text-align: center; }
+    .s-description { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+
+    @media (max-width: 576px) {
+      .services-mf .row .col-md-4 { margin-bottom: 0; }
+    }
+
+    /* ---- COUNTER ---- */
+    .section-counter {
+      padding: 5rem 0;
+      position: relative;
+    }
+    .counter-box { text-align: center; }
+    .counter { font-family: 'Syne', sans-serif; font-size: 3rem; font-weight: 800; color: #fff; margin: 0; }
+    .counter-text { color: rgba(255,255,255,0.8); font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; }
+
+    @media (max-width: 576px) {
+      .counter-box { margin-bottom: 2rem; }
+      .counter { font-size: 2.4rem; }
+    }
+
+    /* ---- PORTFOLIO ---- */
+    .portfolio-mf { padding: 5rem 0; }
+    .work-box {
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+      background: #fff;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+    .work-box:hover { transform: translateY(-4px); }
+    .work-img img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+    .work-content { padding: 1rem 1.2rem; }
+    .w-title { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
+    .w-ctegory { font-size: 0.78rem; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; }
+    .w-date { font-size: 0.78rem; color: var(--text); }
+    .w-like { font-size: 1.5rem; color: var(--accent); text-align: right; line-height: 1; }
+
+    @media (max-width: 576px) {
+      .work-img img { height: 200px; }
+    }
+
+    /* ---- CONTACT ---- */
+    .contact-mf { padding: 3rem 0; }
+    #contact { padding: 3rem 2rem; }
+    .contactForm .form-control {
+      border: 1.5px solid #e0e0e0;
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: 0.95rem;
+      transition: border-color 0.3s;
+    }
+    .contactForm .form-control:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(0,120,255,0.1);
+    }
+    .contactForm textarea { resize: none; }
+
+    .button-a {
+      display: inline-block;
+      background-color: var(--accent);
+      color: #fff !important;
+      border: none;
+      border-radius: 50px;
+      padding: 14px 36px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+    .button-a:hover {
+      background-color: #0060cc;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,120,255,0.3);
+    }
+
+    /* Contact info clickable links */
+    .contact-link {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .contact-link:hover { color: var(--accent); text-decoration: none; }
+
+    .list-ico li { margin-bottom: 8px; font-size: 0.95rem; }
+    .list-ico span { color: var(--accent); margin-right: 10px; }
+
+    /* Social icons */
+    .socials ul { padding: 0; margin: 0; list-style: none; }
+    .socials ul li { display: inline-block; margin-right: 10px; margin-bottom: 10px; }
+    .socials .ico-circle {
+      height: 44px; width: 44px;
+      font-size: 1.4rem;
+      line-height: 1.55;
+      box-shadow: 0 0 0 3px var(--accent);
+      color: var(--accent);
+      transition: all 0.3s;
+    }
+    .socials .ico-circle:hover {
+      background-color: var(--accent);
+      color: #fff;
+      box-shadow: 0 0 0 3px var(--accent-light);
+    }
+
+    /* WhatsApp social icon */
+    .socials .ico-circle.whatsapp-ico {
+      box-shadow: 0 0 0 3px var(--whatsapp);
+      color: var(--whatsapp);
+    }
+    .socials .ico-circle.whatsapp-ico:hover {
+      background-color: var(--whatsapp);
+      color: #fff;
+      box-shadow: 0 0 0 3px #a8f0c4;
+    }
+
+    /* X (Twitter) icon override */
+    .x-icon-svg {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+    }
+
+    @media (max-width: 767px) {
+      #contact { padding: 2rem 1rem; }
+      .title-box-2 { margin-bottom: 1.5rem; }
+    }
+
+    /* ---- FOOTER ---- */
+    footer { padding: 1.5rem 0; }
+    .copyright { font-size: 0.85rem; color: rgba(255,255,255,0.75); margin: 0; }
+    .credits { font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+    .credits a { color: rgba(255,255,255,0.85); }
+
+    /* ---- BACK TO TOP ---- */
+    .back-to-top {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 48px;
+      height: 48px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 16px rgba(0,120,255,0.4);
+      display: none;
+      z-index: 9999;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .back-to-top:hover { background: #0060cc; color: #fff; }
+
+    /* ---- WHATSAPP FLOATING BUTTON ---- */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 84px;
+      right: 24px;
+      width: 52px;
+      height: 52px;
+      background: var(--whatsapp);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      box-shadow: 0 4px 18px rgba(37,211,102,0.45);
+      z-index: 9999;
+      text-decoration: none;
+      transition: all 0.3s;
+      animation: wa-pulse 2.5s infinite;
+    }
+    .whatsapp-float:hover {
+      background: var(--whatsapp-dark);
+      color: #fff;
+      transform: scale(1.1);
+      box-shadow: 0 6px 24px rgba(37,211,102,0.6);
+    }
+    @keyframes wa-pulse {
+      0%  { box-shadow: 0 0 0 0   rgba(37,211,102,0.5); }
+      70% { box-shadow: 0 0 0 14px rgba(37,211,102,0);   }
+      100%{ box-shadow: 0 0 0 0   rgba(37,211,102,0);   }
+    }
+    .whatsapp-float svg {
+      width: 28px;
+      height: 28px;
+      fill: #fff;
+    }
+
+    /* WhatsApp tooltip */
+    .whatsapp-float::before {
+      content: 'Chat on WhatsApp';
+      position: absolute;
+      right: 60px;
+      background: #333;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+    .whatsapp-float:hover::before { opacity: 1; }
+
+    /* ---- TITLE BOXES ---- */
+    .title-box { margin-bottom: 3rem; }
+    .title-a {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .line-mf {
+      width: 40px; height: 5px;
+      background: var(--accent);
+      margin: 0 auto;
+      border-radius: 4px;
+    }
+    .title-left {
+      font-size: 1.6rem;
+      font-weight: 700;
+      position: relative;
+      padding-bottom: 14px;
+    }
+    .title-left:before {
+      content: '';
+      position: absolute;
+      height: 3px;
+      background: var(--accent);
+      width: 80px;
+      bottom: 0;
+      border-radius: 4px;
+    }
+
+    /* Success/error messages */
+    #sendmessage {
+      display: none;
+      background: #d4edda;
+      color: #155724;
+      padding: 12px 16px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      font-size: 0.9rem;
+    }
+    #sendmessage.show, #errormessage.show { display: block; }
+    #errormessage {
+      display: none;
+      background: #f8d7da;
+      color: #721c24;
+      padding: 12px 16px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      font-size: 0.9rem;
+    }
+
+    /* ---- PRELOADER ---- */
+    #preloader {
+      position: fixed;
+      inset: 0;
+      background: #fff;
+      z-index: 99999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #preloader:after {
+      content: '';
+      width: 40px; height: 40px;
+      border: 4px solid var(--accent-light);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ---- GENERAL RESPONSIVE ---- */
+    @media (max-width: 576px) {
+      .sect-pt4 { padding-top: 3rem; }
+      .paralax-mf { padding: 4rem 0; background-attachment: scroll !important; }
+      .section-counter { background-attachment: scroll !important; }
+    }
+    @media (max-width: 400px) {
+      .intro-title { font-size: 1.8rem; }
+    }
+
+    /* Touch-friendly tap targets */
+    @media (hover: none) {
+      .nav-link, .button-a, .contact-link, .back-to-top {
+        min-height: 44px;
+        min-width: 44px;
+      }
+    }
+
+    /* CV download button */
+    .btn-cv {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      color: var(--accent) !important;
+      border: 2px solid var(--accent);
+      border-radius: 50px;
+      padding: 10px 24px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s;
+      margin-top: 1rem;
+    }
+    .btn-cv:hover {
+      background: var(--accent);
+      color: #fff !important;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0,120,255,0.25);
+    }
+  </style>
+</head>
+
+<body id="page-top">
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll" href="#page-top">JORDAN</a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link js-scroll active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll" href="#service">Services</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll" href="#work">Work</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div id="home" class="intro route bg-image" style="background-image: url(img/image2.jpg)">
+    <div class="overlay-itro"></div>
+    <div class="intro-content display-table">
+      <div class="table-cell">
+        <div class="container">
+          <h1 class="intro-title mb-4">I am MALE JORDAN</h1>
+          <p class="intro-subtitle">
+            <span class="text-slider-items">CEO WexternCreations,Web Developer,Web Designer,Graphics Designer</span>
+            <strong class="text-slider"></strong>
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn-hero-primary js-scroll">
+              <i class="fa fa-envelope"></i> Hire Me
+            </a>
+            <a href="Male_Jordan_CV.pdf" download class="btn-hero-outline">
+              <i class="fa fa-download"></i> Download CV
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section id="about" class="about-mf sect-pt4 route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="box-shadow-full">
+            <div class="row align-items-start">
+
+              <!-- Left: Photo + Skills -->
+              <div class="col-md-6 mb-4 mb-md-0">
+                <div class="row align-items-start">
+                  <div class="col-5 col-sm-4 col-md-5">
+                    <div class="about-img">
+                      <img src="img/image3.jpg" class="img-fluid rounded b-shadow-a" alt="Male Jordan">
+                    </div>
+                  </div>
+                  <div class="col-7 col-sm-8 col-md-7">
+                    <div class="about-info">
+                      <p><span class="title-s">Name: </span><span>MALE JORDAN</span></p>
+                      <p><span class="title-s">Profile: </span><span>Developer &amp; Programmer</span></p>
+                      <p>
+                        <span class="title-s">Email: </span>
+                        <a class="contact-link" href="mailto:colonjayjordan@gmail.com">
+                          colonjayjordan@gmail.com
+                        </a>
+                      </p>
+                      <p>
+                        <span class="title-s">Phone: </span>
+                        <a class="contact-link" href="tel:+256766473563">
+                          +256 766 473 563
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="title-s mt-4 mb-2">Skills</p>
+                <div class="skill-mf">
+                  <span>Microsoft Suite</span><span class="pull-right">100%</span>
+                  <div class="progress"><div class="progress-bar" role="progressbar" style="width:100%"></div></div>
+
+                  <span>HTML</span><span class="pull-right">85%</span>
+                  <div class="progress"><div class="progress-bar" role="progressbar" style="width:85%"></div></div>
+
+                  <span>CSS3</span><span class="pull-right">75%</span>
+                  <div class="progress"><div class="progress-bar" role="progressbar" style="width:75%"></div></div>
+
+                  <span>Illustrator</span><span class="pull-right">70%</span>
+                  <div class="progress"><div class="progress-bar" role="progressbar" style="width:70%"></div></div>
+
+                  <span>Photoshop</span><span class="pull-right">60%</span>
+                  <div class="progress"><div class="progress-bar" role="progressbar" style="width:60%"></div></div>
+
+                  <span>Premiere Pro</span><span class="pull-right">78%</span>
+                  <div class="progress"><div class="progress-bar" role="progressbar" style="width:78%"></div></div>
+                </div>
+
+                <!-- CV Download button in About section -->
+                <a href="Male_Jordan_CV.pdf" download class="btn-cv">
+                  <i class="fa fa-file-pdf-o"></i> Download My CV
+                </a>
+              </div>
+
+              <!-- Right: About Me -->
+              <div class="col-md-6">
+                <div class="about-me pt-2 pt-md-0">
+                  <div class="title-box-2">
+                    <h5 class="title-left">About Me</h5>
+                  </div>
+                  <p class="lead">
+                    I am a web developer and programmer who builds responsive websites for organisations and
+                    companies, making it easy for customers to navigate through their products and services.
+                  </p>
+                  <p class="lead">
+                    I am also a seasoned graphic designer with hands-on experience and a track record of
+                    producing visually attractive output.
+                  </p>
+                  <p class="lead">
+                    Additionally, I am a qualified and certified events manager who brings imaginations to life
+                    and creates lasting memories through beautifully decorated events.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="service" class="services-mf route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title-box text-center">
+            <h3 class="title-a">Services</h3>
+            <div class="line-mf"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-md-4 d-flex">
+          <div class="service-box w-100">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="ion-monitor"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">Web Design</h2>
+              <p class="s-description text-center">
+                Creating and building websites that combine visual design elements including text, photos,
+                graphics, animations, and videos.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 d-flex">
+          <div class="service-box w-100">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="ion-code-working"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">Web Development</h2>
+              <p class="s-description text-center">
+                Creating functional, user-friendly websites and web applications by writing clean code and
+                continuously monitoring site performance.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 d-flex">
+          <div class="service-box w-100">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="ion-android-phone-portrait"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">Responsive Design</h2>
+              <p class="s-description text-center">
+                Building flexible interfaces that automatically adapt to any device, screen size, or resolution
+                for all users.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 d-flex">
+          <div class="service-box w-100">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="ion-paintbrush"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">Graphic Design</h2>
+              <p class="s-description text-center">
+                Creating visual concepts and complete layout and production designs for advertisements,
+                brochures, magazines, and reports.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 d-flex">
+          <div class="service-box w-100">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="ion-bowtie"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">Events Management</h2>
+              <p class="s-description text-center">
+                Responsible for the physical appearance and overall atmosphere of events — from colour schemes
+                and decorations to furniture layout — all based on the client's vision.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Counter -->
+  <div class="section-counter paralax-mf bg-image" style="background-image: url(img/image2.jpg)">
+    <div class="overlay-mf"></div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-6 col-sm-3">
+          <div class="counter-box">
+            <div class="counter-ico">
+              <span class="ico-circle"><i class="ion-checkmark-round"></i></span>
+            </div>
+            <div class="counter-num">
+              <p class="counter">96</p>
+              <span class="counter-text">WORKS COMPLETED</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-3">
+          <div class="counter-box pt-4 pt-sm-0">
+            <div class="counter-ico">
+              <span class="ico-circle"><i class="ion-ios-calendar-outline"></i></span>
+            </div>
+            <div class="counter-num">
+              <p class="counter">2.5</p>
+              <span class="counter-text">YEARS EXPERIENCE</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-3">
+          <div class="counter-box pt-4 pt-sm-0">
+            <div class="counter-ico">
+              <span class="ico-circle"><i class="ion-ios-people"></i></span>
+            </div>
+            <div class="counter-num">
+              <p class="counter">18</p>
+              <span class="counter-text">TOTAL CLIENTS</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-3">
+          <div class="counter-box pt-4 pt-sm-0">
+            <div class="counter-ico">
+              <span class="ico-circle"><i class="ion-ribbon-a"></i></span>
+            </div>
+            <div class="counter-num">
+              <p class="counter">3</p>
+              <span class="counter-text">AWARDS WON</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio -->
+  <section id="work" class="portfolio-mf sect-pt4 route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title-box text-center">
+            <h3 class="title-a">Portfolio</h3>
+            <div class="line-mf"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+          <div class="work-box">
+            <a href="img/work-1.jpg" data-lightbox="gallery-mf">
+              <div class="work-img">
+                <img src="img/work-1.jpg" alt="Photo Booths and High Tables" class="img-fluid">
+              </div>
+              <div class="work-content">
+                <div class="row align-items-center">
+                  <div class="col-9">
+                    <h2 class="w-title">Photo Booths and High Tables</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">Events Management</span> / <span class="w-date">Mar. 2024</span>
+                    </div>
+                  </div>
+                  <div class="col-3 text-right">
+                    <div class="w-like"><span class="ion-ios-plus-outline"></span></div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="work-box">
+            <a href="img/work-2.jpg" data-lightbox="gallery-mf">
+              <div class="work-img">
+                <img src="img/work-2.jpg" alt="Website Development" class="img-fluid">
+              </div>
+              <div class="work-content">
+                <div class="row align-items-center">
+                  <div class="col-9">
+                    <h2 class="w-title">Company &amp; Personal Website Development</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">Web Design</span> / <span class="w-date">Mar. 2024</span>
+                    </div>
+                  </div>
+                  <div class="col-3 text-right">
+                    <div class="w-like"><span class="ion-ios-plus-outline"></span></div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="work-box">
+            <a href="img/work-7.jpg" data-lightbox="gallery-mf">
+              <div class="work-img">
+                <img src="img/work-7.jpg" alt="Graphics Editing" class="img-fluid">
+              </div>
+              <div class="work-content">
+                <div class="row align-items-center">
+                  <div class="col-9">
+                    <h2 class="w-title">Visual, Static &amp; Motion Picture Editing</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">Graphics Design</span> / <span class="w-date">Mar. 2024</span>
+                    </div>
+                  </div>
+                  <div class="col-3 text-right">
+                    <div class="w-like"><span class="ion-ios-plus-outline"></span></div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Footer -->
+  <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(img/image2.jpg)">
+    <div class="overlay-mf"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="contact-mf">
+            <div id="contact" class="box-shadow-full">
+              <div class="row">
+
+                <!-- Contact Form -->
+                <div class="col-md-6 mb-4 mb-md-0">
+                  <div class="title-box-2">
+                    <h5 class="title-left">Send a Message</h5>
+                  </div>
+                  <div>
+                    <form id="contactForm" novalidate>
+                      <div id="sendmessage">✅ Your message has been sent. Thank you!</div>
+                      <div id="errormessage"></div>
+                      <div class="row">
+                        <div class="col-12 mb-3">
+                          <div class="form-group">
+                            <input type="text" name="name" class="form-control" id="name"
+                              placeholder="Your Name" required minlength="4">
+                          </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                          <div class="form-group">
+                            <input type="email" class="form-control" name="email" id="email"
+                              placeholder="Your Email" required>
+                          </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                          <div class="form-group">
+                            <input type="text" class="form-control" name="subject" id="subject"
+                              placeholder="Subject" required minlength="4">
+                          </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                          <div class="form-group">
+                            <textarea class="form-control" name="message" rows="5"
+                              placeholder="Message" required id="message"></textarea>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <button type="button" class="button-a" id="sendBtn">Send Message</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+
+                <!-- Get in Touch -->
+                <div class="col-md-6">
+                  <div class="title-box-2 pt-4 pt-md-0">
+                    <h5 class="title-left">Get in Touch</h5>
+                  </div>
+                  <div class="more-info">
+                    <p class="lead">
+                      Find me in person by appointment, or feel free to reach out using any of the contacts below.
+                    </p>
+                    <ul class="list-ico">
+                      <li>
+                        <span class="ion-ios-location"></span>
+                        Kitintale, Old Portbell Road, Kampala, Uganda
+                      </li>
+                      <li>
+                        <span class="ion-ios-telephone"></span>
+                        <a class="contact-link" href="tel:+256766473563">
+                          +256 766 473 563
+                        </a>
+                      </li>
+                      <li>
+                        <span class="ion-email"></span>
+                        <a class="contact-link" href="mailto:colonjayjordan@gmail.com">
+                          colonjayjordan@gmail.com
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="socials">
+                    <ul>
+                      <li>
+                        <a href="https://www.instagram.com/jordancolonjay5/" target="_blank" rel="noopener" aria-label="Instagram">
+                          <span class="ico-circle"><i class="ion-social-instagram"></i></span>
+                        </a>
+                      </li>
+                      <li>
+                        <!-- X (formerly Twitter) -->
+                        <a href="https://twitter.com/kabakaColonjay" target="_blank" rel="noopener" aria-label="X (formerly Twitter)">
+                          <span class="ico-circle" style="display:inline-flex;align-items:center;justify-content:center;">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.91-5.622Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"/>
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://github.com/Colonjay" target="_blank" rel="noopener" aria-label="GitHub">
+                          <span class="ico-circle"><i class="ion-social-github"></i></span>
+                        </a>
+                      </li>
+                      <li>
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/256766473563?text=Hello%20Male%20Jordan%2C%20I%20visited%20your%20portfolio%20and%20I%20would%20like%20to%20work%20with%20you." target="_blank" rel="noopener" aria-label="WhatsApp">
+                          <span class="ico-circle whatsapp-ico" style="display:inline-flex;align-items:center;justify-content:center;">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="copyright-box text-center">
+              <p class="copyright">&copy; 2025 <strong>JORDAN'S PORTFOLIO</strong>. All Rights Reserved</p>
+              <div class="credits">Designed by <a href="#page-top">MALE JORDAN</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/256766473563?text=Hello%20Male%20Jordan%2C%20I%20visited%20your%20portfolio%20and%20I%20would%20like%20to%20work%20with%20you."
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener"
+     aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </a>
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/popper/popper.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/counterup/jquery.waypoints.min.js"></script>
+  <script src="lib/counterup/jquery.counterup.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="lib/typed/typed.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    // ---- Contact form: builds mailto link and opens email client ----
+    document.getElementById('sendBtn').addEventListener('click', function () {
+      var name    = document.getElementById('name').value.trim();
+      var email   = document.getElementById('email').value.trim();
+      var subject = document.getElementById('subject').value.trim();
+      var message = document.getElementById('message').value.trim();
+
+      var err = document.getElementById('errormessage');
+      var ok  = document.getElementById('sendmessage');
+      err.className = '';
+      ok.className  = '';
+
+      if (!name || name.length < 4) {
+        err.textContent = '⚠ Please enter your name (at least 4 characters).';
+        err.className = 'show';
+        return;
+      }
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        err.textContent = '⚠ Please enter a valid email address.';
+        err.className = 'show';
+        return;
+      }
+      if (!subject || subject.length < 4) {
+        err.textContent = '⚠ Please enter a subject (at least 4 characters).';
+        err.className = 'show';
+        return;
+      }
+      if (!message) {
+        err.textContent = '⚠ Please write a message.';
+        err.className = 'show';
+        return;
+      }
+
+      var body = 'Name: ' + name + '\nEmail: ' + email + '\n\n' + message;
+      var mailto = 'mailto:colonjayjordan@gmail.com'
+        + '?subject=' + encodeURIComponent(subject)
+        + '&body='    + encodeURIComponent(body);
+
+      window.location.href = mailto;
+      ok.className = 'show';
+
+      // Reset form
+      document.getElementById('contactForm').reset();
+    });
+  </script>
+
+</body>
+</html>
